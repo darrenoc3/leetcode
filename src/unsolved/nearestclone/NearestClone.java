@@ -8,11 +8,9 @@ import java.util.List;
 import java.util.Scanner;
 
 class Triple {
-	private {
-		String sub;
-		String pred;
-		String obj;
-	}
+    String sub;
+    String pred;
+    String obj;
 	public Triple(String sub, String pred, String obj) {
 		this.sub = sub;
 		this.pred = pred;
@@ -24,11 +22,9 @@ class Triple {
 	}
 }
 class TripleStore {
-	private {
-		HashMap<String, Triple> spo = new HashMap<String, Triple>();
-		HashMap<String, Triple> pos = new HashMap<String, Triple>();
-		HashMap<String, Triple> osp = new HashMap<String, Triple>();
-	}
+    HashMap<String, Triple> spo = new HashMap<String, Triple>();
+    HashMap<String, Triple> pos = new HashMap<String, Triple>();
+    HashMap<String, Triple> osp = new HashMap<String, Triple>();
 }
 
 public class NearestClone {
@@ -45,8 +41,8 @@ public class NearestClone {
     static int findShortest(int graphNodes, int graphEdges, int[] graphFrom, int[] graphTo, long[] ids, int val) {
     	List<Triple> triples = new LinkedList<Triple>();
     	for(int e = 0; e < graphEdges; e++) {
-    		Triple t = new Triple(graphFrom[e], "", graphTo[e]);
-    		triples.add(t);
+    		//Triple t = new Triple(graphFrom[e], "", graphTo[e]);
+    		//triples.add(t);
     	}
     	return 0;
     }
