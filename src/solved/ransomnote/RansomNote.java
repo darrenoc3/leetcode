@@ -1,4 +1,4 @@
-package RansomNote;
+package solved.ransomnote;
 
 import java.io.File;
 import java.io.FileNotFoundException;

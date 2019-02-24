@@ -1,4 +1,4 @@
-package AddLists;
+package unsolved.addlists;
 
 class ListNode {
 	int val;

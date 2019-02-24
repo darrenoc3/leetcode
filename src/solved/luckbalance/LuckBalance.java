@@ -1,4 +1,4 @@
-package LuckBalance;
+package solved.luckbalance;
 
 import java.io.File;
 import java.io.IOException;

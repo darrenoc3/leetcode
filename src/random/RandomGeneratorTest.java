@@ -1,7 +1,8 @@
 package random;
 
-import static org.junit.jupiter.api.Assertions.*;
 import java.util.Random;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 // Create deterministic mock of java.util.Random
@@ -28,8 +29,8 @@ class RandomGeneratorTest {
 	void testDeterministicRandom() {
 		DeterministicRandom dr = new DeterministicRandom(0.5f);
 		// Check that DeterministicRandom extends java.util.Random
-		assertTrue(dr instanceof Random);
-		assertEquals(dr.nextFloat(), 0.5f);
+		Assertions.assertTrue(dr instanceof Random);
+		Assertions.assertEquals(dr.nextFloat(), 0.5f);
 	}
 	
 	/**
@@ -47,7 +48,7 @@ class RandomGeneratorTest {
 			exceptionThrown = true;
 		}
 		if(!exceptionThrown) {
-			fail("Expected IllegalArgumentException was not thrown for wrong number of inputs");
+			Assertions.fail("Expected IllegalArgumentException was not thrown for wrong number of inputs");
 		}
 	}
 	
@@ -66,7 +67,7 @@ class RandomGeneratorTest {
 			exceptionThrown = true;
 		}
 		if(!exceptionThrown) {
-			fail("Expected IllegalArgumentException was not thrown when sum of probabilities "
+			Assertions.fail("Expected IllegalArgumentException was not thrown when sum of probabilities "
 					+ "was <1.0");
 		}
 	}
@@ -95,15 +96,15 @@ class RandomGeneratorTest {
 		 // e.g. 0.005f should return -1, because 0.005f < 0.01f, putting it in the first 'bucket'
 		 DeterministicRandom dr = new DeterministicRandom(0.005f);
 		 RandomGenerator r = new RandomGenerator(randomNums, probabilityBuckets, dr);
-		 assertEquals(randomNums[0], r.nextNum());
+		 Assertions.assertEquals(randomNums[0], r.nextNum());
 		 
 		 dr = new DeterministicRandom(0.01f);
 		 r = new RandomGenerator(randomNums, probabilityBuckets, dr);
-		 assertEquals(randomNums[1], r.nextNum());
+		 Assertions.assertEquals(randomNums[1], r.nextNum());
 		 
 		 dr = new DeterministicRandom(0.999f);
 		 r = new RandomGenerator(randomNums, probabilityBuckets, dr);
-		 assertEquals(randomNums[4], r.nextNum());
+		 Assertions.assertEquals(randomNums[4], r.nextNum());
 	}
 
 }

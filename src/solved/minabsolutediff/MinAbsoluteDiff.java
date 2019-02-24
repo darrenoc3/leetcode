@@ -1,4 +1,4 @@
-package MinAbsoluteDiff;
+package solved.minabsolutediff;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package NearestClone;
+package unsolved.nearestclone;
 
 import java.io.File;
 import java.io.IOException;
